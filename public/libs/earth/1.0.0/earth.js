@@ -72,6 +72,7 @@
 
     // Construct the page's main internal components:
 
+    // TODO (v3 to v7): resolve "TypeError: Cannot read properties of undefined (reading 'overlayTypes')"
     var configuration =
         µ.buildConfiguration(globes, products.overlayTypes);  // holds the page's current configuration settings
     var inputController = buildInputController();             // interprets drag/zoom operations
@@ -120,6 +121,7 @@
             };
         }
 
+        // TODO (v3 to v4): change d3.behavior.zoom() to d3.zoom(); change "zoomstart" to "start" and "zoomend" to "end"?
         var zoom = d3.behavior.zoom()
             .on("zoomstart", function() {
                 op = op || newOp(d3.mouse(this), zoom.scale());  // a new operation begins

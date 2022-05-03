@@ -338,6 +338,7 @@ var globes = function() {
         });
     }
 
+    // TODO (v3 to v7): resolve "TypeError: values is not iterable"
     return d3.map({
         atlantis: atlantis,
         azimuthal_equidistant: azimuthalEquidistant,

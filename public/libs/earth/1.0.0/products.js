@@ -688,6 +688,7 @@ var products = function() {
         return results.filter(µ.isValue);
     }
 
+    // TODO (v3 to v7): resolve "TypeError: d3.set is not a function" by changing 
     return {
         overlayTypes: d3.set(_.keys(FACTORIES)),
         productsFor: productsFor
